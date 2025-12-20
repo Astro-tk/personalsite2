@@ -1,701 +1,162 @@
-
-
-
-
-
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Thato Kgopa</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", Arial, sans-serif;
+    }
 
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    body {
+      background: #000;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/main.css">
+    .content {
+      text-align: center;
+      max-width: 600px;
+      padding: 40px;
+    }
 
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
+    .tag {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
 
-    <!-- favicons
-    ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    h1 {
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
 
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .time-box {
+      text-align: center;
+    }
+
+    .time {
+      font-size: 40px;
+      font-weight: 500;
+    }
+
+    .label {
+      font-size: 12px;
+      color: #c9a44c;
+      margin-top: 6px;
+      text-transform: lowercase;
+    }
+
+    .email-box {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .email-box input {
+      width: 260px;
+      padding: 12px 14px;
+      background: transparent;
+      border: 1px solid #333;
+      color: #fff;
+      outline: none;
+    }
+
+    .email-box button {
+      background: none;
+      border: none;
+      color: #c9a44c;
+      padding: 0 16px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .countdown {
+        gap: 20px;
+      }
+
+      .time {
+        font-size: 32px;
+      }
+    }
+  </style>
 </head>
 
-<body id="top">
+<body>
 
-    <div id="preloader">
-        <div id="loader"></div>
+  <div class="content">
+    <div class="tag">#underconstruction</div>
+    <h1>Coming Soon</h1>
+
+    <div class="countdown">
+      <div class="time-box">
+        <div class="time" id="days">00</div>
+        <div class="label">days</div>
+      </div>
+      <div class="time-box">
+        <div class="time" id="hours">00</div>
+        <div class="label">hours</div>
+      </div>
+      <div class="time-box">
+        <div class="time" id="minutes">00</div>
+        <div class="label">minutes</div>
+      </div>
+      <div class="time-box">
+        <div class="time" id="seconds">00</div>
+        <div class="label">seconds</div>
+      </div>
     </div>
 
-    <!-- site header
-    ================================================== -->
-    <header class="s-header">
-
-        <div class="header-logo">
-            <a class="site-logo" href="index.html">
-                <img src="images/logo.svg" alt="Homepage">
-            </a>
-        </div>
-
-        <nav class="header-nav-wrap">
-            <ul class="header-main-nav">
-                <li class="current"><a class="smoothscroll" href="#intro" title="intro">Intro</a></li>
-                <li><a class="smoothscroll" href="#about" title="about">About</a></li>
-                <li><a class="smoothscroll" href="#services" title="services">Services</a></li>
-                <li><a class="smoothscroll" href="#works" title="works">Works</a></li>
-                <li><a class="smoothscroll" href="#contact" title="contact us">Say Hello</a></li>	
-            </ul>
-
-            <ul class="header-social">
-                <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                <li><a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a></li>
-                <li><a href="#0"><i class="fab fa-behance" aria-hidden="true"></i></a></li>
-            </ul>
-        </nav>
-
-        <a class="header-menu-toggle" href="#"><span>Menu</span></a>
-
-    </header> <!-- end s-header -->
-
-
-    <!-- intro
-    ================================================== -->
-    <section id="intro" class="s-intro target-section">
-
-        <div class="row intro-content">
-
-            <div class="column large-9 mob-full intro-text">
-                <h3>Hello, I'm Thato</h3>
-                <h1>
-                    Digital Designer <br>
-                    and Web & Software Developer <br>
-                    Based In Pretoria.
-                </h1>
-            </div>
-
-            <div class="intro-scroll">
-                <a href="#about" class="intro-scroll-link smoothscroll">
-                    Scroll For More
-                </a>
-            </div>
-
-            <div class="intro-grid"></div>
-            <div class="intro-pic"></div>
-
-        </div> <!-- end row -->
-
-    </section> <!-- end intro -->
-
-
-    <!-- about
-    ================================================== -->
-    <section id="about" class="s-about target-section">
-
-        <div class="about-me">
-
-            <div class="row heading-block" data-aos="fade-up">
-                <div class="column large-full">
-                    <h2 class="section-heading">About Me</h2>
-                </div>
-            </div>
-
-            <div class="row about-me__content" data-aos="fade-up">
-                <div class="column large-full about-me__text">
-                    <p class="lead">
-                    I’m a designer, developer, and problem-solver passionate about merging creativity with technology. As the founder of Aurion, I help businesses and individuals bring their digital ideas to life through web design, custom software, and AI-driven solutions. My work focuses on functionality, clean aesthetics, and user-centered experiences that make technology feel natural and empowering.
-                    </p>
-
-                    <p>
-                    Every project I take on starts with understanding, the brand, the goals, and the people behind it. I believe design is more than visuals; it’s about creating seamless systems that tell a story, improve efficiency, and spark engagement. Whether I’m building a responsive website, developing automation tools, or refining a user interface, my goal is always to craft something purposeful and lasting.
-                    </p>
-
-                    <p>
-                    Aurion was born from a desire to blend engineering precision with creative design. My background in Mechanical Engineering from the University of Pretoria taught me how to approach challenges analytically, while my passion for digital innovation taught me to think beyond boundaries. Together, these perspectives allow me to build solutions that are both technically sound and visually compelling.
-                    </p>
-
-                    <p>
-                    Outside of client work, I’m constantly learning and experimenting with new technologies, from AI integration and UX design principles to digital storytelling. For me, growth is a continuous journey, and every new challenge is an opportunity to create something meaningful.
-                    </p>
-                </div>
-            </div>
-    
-            <div class="row about-me__buttons">
-                <div class="column large-half tab-full" data-aos="fade-up">
-                    <a href="#0" class="btn btn--stroke full-width">Work with Me</a>
-                </div>
-                <div class="column large-half tab-full" data-aos="fade-up">
-                    <a href="#0" class="btn btn--primary full-width">Download CV</a>
-                </div>
-            </div>
-
-        </div> <!-- end about-me -->
-
-        <div class="about-experience">
-
-            <div class="row heading-block" data-aos="fade-up">
-                <div class="column large-full">
-                    <h2 class="section-heading">Work & Education</h2>
-                </div>
-            </div>
-
-            <div class="row about-experience__timeline">
-
-                <div class="column large-half tab-full" data-aos="fade-up">
-                    <div class="timeline">
-
-                        <div class="timeline__icon-wrap">
-                            <span class="timeline__icon timeline__icon--work"></span>
-                        </div>
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">April 2025 - Present</p>
-                                <h3 class="item-title">Aurion Creative</h3>
-                                <h5>Founder & Lead Developer</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>I founded Aurion to bridge creativity and technology through intelligent digital solutions. At Aurion, I lead the design and development of websites, custom software, and AI-driven systems that help brands operate more efficiently and stand out online. My work involves managing projects from concept to deployment, combining strategic design with technical precision to deliver products that are visually striking, user-friendly, and performance-driven.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">November 2023 - Present</p>
-                                <h3 class="item-title">University of Pretoria Aerospace Society</h3>
-                                <h5>Chairperson, Treasurer</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>I served as both Chairperson and Treasurer of the Aerospace Society, overseeing operations, events, and strategic partnerships. I managed financial planning, coordinated collaborations with industry partners, and helped organize events. These experiences strengthened my leadership, communication, and project management skills within a technical and creative environment.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">April 2025 - August 2025</p>
-                                <h3 class="item-title">Delta BEC</h3>
-                                <h5>Student Mechanical Engineer</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>At Delta BEC, I gained hands-on exposure to the engineering design process, assisting with layouts, technical documentation, and system analysis. Working alongside experienced engineers, I learned how design, precision, and collaboration contribute to delivering practical and efficient solutions. This experience deepened my appreciation for engineering principles.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="column large-half tab-full" data-aos="fade-up">
-                    <div class="timeline">
-
-                        <div class="timeline__icon-wrap">
-                            <span class="timeline__icon timeline__icon--education"></span>
-                        </div>
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">January 2023 - Present</p>
-                                <h3 class="item-title">University of Pretoria</h3>
-                                <h5>BEng Mechanical Engineering</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>Throughout my degree, I’ve developed a strong foundation in problem-solving, systems thinking, and design principles. My studies have deepened my understanding of mechanics, thermodynamics, and materials, while also inspiring me to explore how engineering concepts intersect with software, automation, and digital systems. This blend of analytical and creative skills shapes the way I approach every project at Aurion.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">July 2025 - August 2025</p>
-                                <h3 class="item-title">University of Minnesota - Coursera</h3>
-                                <h5>Introduction to UX design mastertrack</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>This course expanded my understanding of user experience and human-centered design. I learned how to conduct user research, design intuitive interfaces, and apply usability testing to improve digital products. It strengthened my ability to merge technical development with thoughtful, user-first design, a philosophy I now integrate into all Aurion projects.</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">December 2024 - June 2025</p>
-                                <h3 class="item-title">SoloLearn</h3>
-                                <h5>Fundamentals of Web Design</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>Through this program, I gained essential web development skills, including HTML, CSS, and responsive design principles. It marked the start of my journey into building digital experiences, teaching me how to translate ideas into functional, visually appealing interfaces, the core of what would later become Aurion’s design philosophy.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        </div> <!-- end about-experience -->
-
-    </section> <!-- end s-about -->
-
-
-    <!-- services
-    ================================================== -->
-    <section id="services" class="s-services ss-dark target-section">
-
-        <div class="shadow-overlay"></div>
-
-        <div class="row heading-block heading-block--center" data-aos="fade-up">
-            <div class="column large-full">
-                <h2 class="section-heading section-heading--centerbottom">Capabilities</h2>
-
-                <p class="section-desc">
-                    My passion and goal is to help you make your business standout.
-                </p>
-            </div>
-        </div> <!-- end heading-block -->
-
-        <div class="row services-list block-large-1-3 block-medium-1-2 block-tab-full">
-
-            <div class="column item-service" data-aos="fade-up">
-                <div class="item-service__content">
-                    <h4 class="item-title">Software Development</h4>
-                    <p>
-                    Custom software solutions tailored to your business needs. From enterprise applications to specialized tools, I build robust, scalable, and efficient software that drives your operations and growth.
-                    </p>
-                </div>
-            </div>
-
-            <div class="column item-service" data-aos="fade-up">
-                <div class="item-service__content">
-                    <h4 class="item-title">AI & Automation Solutions</h4>
-                    <p>
-                    Harness the power of artificial intelligence to streamline your business. I develop intelligent automation systems and AI-driven applications that optimize workflows, reduce costs, and provide data-driven insights.
-                    </p>
-                </div>
-            </div>
-
-            <div class="column item-service" data-aos="fade-up">
-                <div class="item-service__content">
-                    <h4 class="item-title">Web Design</h4>
-                    <p>
-                    Creating visually stunning and strategically designed websites that capture your brand's essence. I focus on delivering engaging user experiences that convert visitors into customers and reflect your company's unique value.
-                    </p>
-                </div>
-            </div>
-
-            <div class="column item-service" data-aos="fade-up">
-                <div class="item-service__content">
-                    <h4 class="item-title">UI/UX Design</h4>
-                    <p>
-                    I design intuitive and user-centered interfaces that are both beautiful and functional. My process focuses on user research and testing to ensure seamless navigation and a positive overall experience for your audience.
-                    </p>
-                </div>
-            </div>
-
-            <div class="column item-service" data-aos="fade-up">
-                <div class="item-service__content">
-                    <h4 class="item-title">Mobile Design</h4>
-                    <p>
-                    Designing mobile experiences that users love. I create responsive and adaptive interfaces for smartphones and tablets, ensuring your product is accessible and effective on any device.
-                    </p>
-                </div>
-            </div>
-
-            <div class="column item-service" data-aos="fade-up">
-                <div class="item-service__content">
-                    <h4 class="item-title">Brand Identity</h4>
-                    <p>
-                    Building a strong, memorable brand from the ground up. I craft cohesive visual identities including logos, color palettes, and typography that communicate your story and resonate with your target market.
-                    </p>
-                </div>
-            </div>
-
-        </div> <!-- end services-list -->
-
-    </section> <!-- end s-services -->
-
-
-    <!-- CTA
-    ================================================== -->
-    <section class="s-cta ss-dark">
-
-        <div class="row heading-block heading-block--center" data-aos="fade-up">
-            <div class="column large-full">
-                <h2 class="section-desc">
-                    Let’s Build the Future, One Line of Code at a Time
-                </h2>
-            </div>
-        </div> <!-- end heading-block -->
-
-        <div class="row cta-content" data-aos="fade-up">
-            <div class="column large-full">
-                <p>
-                <a href = "https://aurioncreative.com/">Aurion</a> partners with forward-thinking individuals and businesses to design intelligent systems and seamless digital experiences. Whether it’s software, web, or AI. Innovation starts here!
-                </p>
-
-                <a href="https://aurioncreative.com/" class="btn full-width">Get Started</a>
-            </div>
-        </div> <!-- end ad-content -->
-
-    </section> <!-- end s-cta -->
-
-
-    <!-- works
-    ================================================== -->
-    <section id="works" class="s-works target-section">
-
-        <div class="row heading-block heading-block--center" data-aos="fade-up">
-            <div class="column large-full">
-                <h2 class="section-heading section-heading--centerbottom">Recent Works</h2>
-                <p class="section-desc">
-                    Here are some of my selected works I have done lately. Feel free to 
-                    check them out.
-                </p>
-            </div>
-        </div> <!-- end heading-block -->
-
-        <div class="masonry-wrap">
-
-            <div class="masonry">
-                <div class="grid-sizer"></div>
-    
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-city-building.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
-                                <img src="images/portfolio/city-building.jpg" 
-                                     srcset="images/portfolio/city-building.jpg 1x, images/portfolio/city-building@2x.jpg 2x" alt="">
-                            </a>    
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
-                        </div>
-    
-                        <div class="item-folio__text">
-                            <h4 class="item-folio__title">
-                                Eziko Reads
-                            </h4>
-                            <p class="item-folio__cat">
-                                Branding
-                            </p>
-                        </div>
-    
-                        <div class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </div>
-                    </div>
-                </div> <!-- end masonry__brick -->
-    
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                                <img src="images/portfolio/woodcraft.jpg" 
-                                     srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
-                            </a>
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
-                        </div>
-                        <div class="item-folio__text">
-                            <h4 class="item-folio__title">
-                                Synthesis Apparel
-                            </h4>
-                            <p class="item-folio__cat">
-                                Web Design
-                            </p>
-                        </div>
-                        <div class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </div>
-                    </div>
-                </div> <!-- end masonry__brick -->
-
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-                            
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-beetle.jpg" class="thumb-link" title="The Beetle Car" data-size="1050x700">
-                                <img src="images/portfolio/the-beetle.jpg"
-                                     srcset="images/portfolio/the-beetle.jpg 1x, images/portfolio/the-beetle@2x.jpg 2x" alt="">
-                            </a>
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
-                        </div>
-                        <div class="item-folio__text">
-                            <h4 class="item-folio__title">
-                                Aurion
-                            </h4>
-                            <p class="item-folio__cat">
-                                AI Chatbot
-                            </p>
-                        </div>
-                        <div class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </div>
-                    </div>
-                </div> <!-- end masonry__brick -->
-
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" title="Grow Green" data-size="1050x700">
-                                <img src="images/portfolio/shutterbug.jpg" 
-                                     srcset="images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x" alt="">
-                            </a>
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
-                        </div>
-                        <div class="item-folio__text">
-                            <h4 class="item-folio__title">
-                                Global Leadership Consultants
-                            </h4>
-                            <p class="item-folio__cat">
-                                Web Design
-                            </p>
-                        </div>
-                        <div class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </div>
-                    </div>
-                </div> <!-- end masonry__brick -->
-
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-                            
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-lamp.jpg" class="thumb-link" title="Guitarist" data-size="1050x700">
-                                <img src="images/portfolio/lamp.jpg" 
-                                     srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt="">
-                            </a>
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
-                        </div>
-                        <div class="item-folio__text">
-                            <h4 class="item-folio__title">
-                                Aurion
-                            </h4>
-                            <p class="item-folio__cat">
-                                AI Application
-                            </p>
-                        </div>
-                        <div class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </div>
-                    </div>
-                </div> <!-- end masonry__brick -->
-        
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-                            
-                        <div class="item-folio__thumb">
-                            <a href="images/portfolio/gallery/g-fuji.jpg" class="thumb-link" title="Palmeira" data-size="1050x700">
-                                <img src="images/portfolio/fuji.jpg"
-                                     srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="">
-                            </a>
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link" target="_blank"></a>
-                        </div>
-                        <div class="item-folio__text">
-                            <h4 class="item-folio__title">
-                                Lyzet Boutique Spa
-                            </h4>
-                            <p class="item-folio__cat">
-                                Web Design & Branding
-                            </p>
-                        </div>
-                        <div class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                        </div>
-                    </div>
-                </div> <!-- end masonry__brick -->
-
-            </div> <!-- end masonry -->
-
-        </div> <!-- end masonry-wrap -->
-
-    </section> <!-- end s-work -->
-
-
-    <!-- testimonies
-    ================================================== -->
-    <section class="s-testimonials">
-    
-        <div class="row testimonials" data-aos="fade-up">
-
-            <div class="column large-full testimonials__slider">
-
-                <div class="testimonials__slide">
-                    <p>Working with Thato at Aurion was one of the best decisions we made for our digital presence. He took our scattered ideas, refined them, and delivered a clean, modern website that represents our brand perfectly. 
-                        The communication was excellent throughout, and every adjustment was handled quickly. Highly recommended for anyone who wants professional results.</p>
-                    <div class="testimonials__info">
-                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
-                        <cite class="testimonials__cite">
-                            <strong>Luphumlo Joka</strong>
-                            <span>Director, Global Leadership Consultants</span>
-                        </cite>
-                    </div>
-                </div> <!-- end testimonials__slide -->
-
-                <div class="testimonials__slide">
-                    <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                    Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
-                        Quasi voluptas eius distinctio. Atque eos maxime.</p>
-                    <div class="testimonials__info">
-                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
-                        <cite class="testimonials__cite">
-                            <strong>Sundar Pichai</strong>
-                            <span>CEO, Google</span>
-                        </cite>
-                    </div>
-                </div> <!-- end testimonials__slide -->
-
-                <div class="testimonials__slide">
-                    <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
-                    Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
-                    Voluptatem dignissimos ut.</p>
-                    <div class="testimonials__info">
-                        <img src="images/avatars/user-04.jpg" alt="Author image" class="testimonials__avatar">
-                        <cite class="testimonials__cite">
-                            <strong>Satya Nadella</strong>
-                            <span>CEO, Microsoft</span>
-                        </cite>
-                    </div>
-                </div> <!-- end testimonials__slide -->
-                
-            </div> <!-- end testimonials__slider -->
-
-        </div> <!-- end testimonials -->
-
-    </section> <!-- end s-testimonials -->
-
-
-    <!-- contact
-    ================================================== -->
-    <section id="contact" class="s-contact ss-dark target-section">
-
-        <div class="row heading-block" data-aos="fade-up">
-            <div class="column large-full">
-                <h2 class="section-heading">Get In Touch</h2>
-            </div>
-        </div>
-
-        <div class="row contact-main" data-aos="fade-up">
-            <div class="column large-full">
-                <p class="contact-email">
-                    <a href="mailto:thato@aurioncreative.com">thato@aurioncreative.com</a>
-                </p>
-
-                <p class="section-desc">
-                I'm happy to connect, listen and help. Let's work together and build
-                something awesome. Let's turn your idea to an even greater product.
-                <a href="mailto:thato@aurioncreative.com">Email Me</a>.
-                </p>
-            </div>
-        </div>
-
-        <div class="row contact-infos" data-aos="fade-up" data-aos-anchor=".contact-main">
-
-            <div class="column large-5 medium-full contact-phone">
-                <h4>Call Me</h4>
-                <a href="tel:197-543-2345">+27 67 286 2136</a>
-            </div>
-
-            <div class="column large-7 medium-full contact-social">
-                <h4>Social</h4>
-                <ul>
-                    <li><a href="#0" title="Facebook">Facebook</a></li>
-                    <li><a href="#0" title="Twitter">Twitter</a></li>
-                    <li><a href="https://www.instagram.com/astro_tk_/" title="Instagram">Instagram</a></li>
-                </ul>
-            </div>
-
-        </div> <!-- end contact-infos -->
-
-    </section> <!-- end s-contact -->
-
-
-    <!-- footer
-    ================================================== -->
-    <footer>
-        <div class="row">
-            <div class="column large-full ss-copyright">
-                <span>© Copyright Thato Kgopa 2025</span> 
-                <span>Design by <a href="https://aurioncreative.com/">Aurion Creative</a></span>
-            </div>            
-
-            <div class="ss-go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top"></a>
-            </div>
-        </div>
-    </footer>
-
-
-    <!-- photoswipe background
-    ================================================== -->
-    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
-                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
-                    "Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
-                "Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-            </div>
-
-        </div>
-
-    </div><!-- end photoSwipe background -->
-
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <div class="email-box">
+      <input type="email" placeholder="Your e-mail">
+      <button>→ Subscribe</button>
+    </div>
+  </div>
+
+  <script>
+    // Countdown: 30 days from now
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 30);
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
+</html>
