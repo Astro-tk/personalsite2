@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #0f0f0f;
+        color: #ffffff;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .countdown {
+        text-align: center;
+    }
+
+    .time {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .unit {
+        text-align: center;
+    }
+
+    .number {
+        font-size: 3rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+
+    .label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        opacity: 0.6;
+        letter-spacing: 1px;
+    }
+
+    .title {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        opacity: 0.7;
+    }
+
+    /* subtle fade animation */
+    .number {
+        transition: all 0.3s ease;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="countdown">
+    <div class="title">Launching Soon</div>
+    <div class="time">
+        <div class="unit">
+            <div id="days" class="number">00</div>
+            <div class="label">Days</div>
+        </div>
+        <div class="unit">
+            <div id="hours" class="number">00</div>
+            <div class="label">Hours</div>
+        </div>
+        <div class="unit">
+            <div id="minutes" class="number">00</div>
+            <div class="label">Minutes</div>
+        </div>
+        <div class="unit">
+            <div id="seconds" class="number">00</div>
+            <div class="label">Seconds</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 🔧 SET YOUR DATE HERE
+    const targetDate = new Date("2026-05-31T23:59:59").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+            document.querySelector(".time").innerHTML = "<div class='number'>00:00:00</div>";
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("days").textContent = String(days).padStart(2, '0');
+        document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+        document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+        document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>
+
+</body>
+</html>
